@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="bg-gradient-to-br from-fuchsia-700/30 to-blue-600/30 font-body">
+  <app-product-section
+    [sectionTitle]="'jewelery'"
+    [sectionDescription]="
+      'Check out some of our favorite, finest pieces of jewelery from our collection.'
+    "
+    [products]="products"
+  ></app-product-section>
+
+  <app-newsletter></app-newsletter>
+  <div>
+    <h3 class="text-3xl text-white text-center my-4">
+      Why dont you check out ...
+    </h3>
+    <div class="flex mx-auto justify-center">
+      <app-product-card-long [product]="products[0]"></app-product-card-long>
+    </div>
+  </div>
+
+  <app-product-section
+    [sectionTitle]="'men\'s clothing'"
+    [sectionDescription]="
+      'Check out some of our favorite, finest pieces of clothing from our collection.'
+    "
+    [products]="products"
+    [reversed]="true"
+  ></app-product-section>
+</div>

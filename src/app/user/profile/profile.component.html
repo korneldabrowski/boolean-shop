@@ -1,0 +1,71 @@
+<div *ngIf="userProfile">
+  <main class="flex font-display mt-40">
+    <section class="py-12 bg-fuchsia-400/30">
+      <div class="container mx-auto px-4">
+        <div
+          class="relative text-accent-content bg-blend-multiply flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64"
+          style="
+            background-image: url(https://cdn.pixabay.com/photo/2020/12/20/21/17/city-5848267_1280.jpg);
+          "
+        >
+          <div
+            class="px-6 bg-opacity-20 backdrop-blur-[6px] rounded-3xl drop-shadow-lg"
+          >
+            <div class="flex flex-wrap justify-center">
+              <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
+                <div class="relative">
+                  <img
+                    alt="cat profile picture"
+                    src="https://cataas.com/cat?width=300"
+                    class="shadow-xl rounded-full mt-2 h-64 align-middle border-none"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-12">
+              <h3
+                class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700"
+              >
+                {{ userProfile.name.firstname | titlecase }}
+                {{ userProfile.name.lastname | titlecase }}
+              </h3>
+              <div
+                class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase"
+              >
+                <i
+                  class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"
+                ></i>
+                {{ userProfile.address.city }}, California
+              </div>
+              <div class="mb-2 text-blueGray-600 mt-10">
+                <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i
+                >Email - {{ userProfile.email }}
+              </div>
+              <div class="mb-2 text-blueGray-600">
+                <i class="fas fa-university mr-2 text-lg text-blueGray-400"></i
+                >Username - {{ userProfile.username }}
+              </div>
+            </div>
+            <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
+              <div class="flex flex-wrap justify-center">
+                <div class="w-full lg:w-9/12 px-4">
+                  <p class="mb-4 text-lg leading-relaxed text-blueGray-700">
+                    Meet Whiskers, a feline phenomenon with a flair for
+                    playfulness. This charismatic cat, with eyes that sparkle
+                    like emeralds, delights in captivating you with its graceful
+                    movements and mischievous antics. Whiskers brings a symphony
+                    of joy to your home, turning each day into a delightful
+                    melody of purrs and whisker twitches.
+                  </p>
+                  <a href="/user-profile" class="font-normal text-pink-500"
+                    >Change account details</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

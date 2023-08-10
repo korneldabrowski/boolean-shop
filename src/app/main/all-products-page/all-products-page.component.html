@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+<div>
+  <div class="grid lg:grid-cols-4 px-16 py-4 gap-4 rounded-3xl">
+    <div *ngFor="let product of products">
+      <app-product-card [product]="product"></app-product-card>
+    </div>
+  </div>
+</div>

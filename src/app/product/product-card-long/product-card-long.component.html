@@ -1,0 +1,36 @@
+<div
+  *ngIf="product"
+  class="hover:bg-base-100 w-[48rem] h-full rounded-lg shadow-lg transition duration-500 bg-gradient-to-br from-fuchsia-500 via-red-300 to-sky-500 p-1 hover:cursor-pointer"
+>
+  <a
+    class="h-full w-full items-center justify-center p-4 bg-base-200 hover:filter-glow flex"
+    href="/product/{{ product.id }}"
+  >
+    <div class="">
+      <label class="badge badge-accent flex mr-auto badge-outline">{{
+        product.category
+      }}</label>
+      <div class="p-12">
+        <img
+          [src]="product.image"
+          [alt]="product.title"
+          class="object-contain h-64 w-96 hover:filter-glow"
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-col h-full w-full">
+      <h3
+        class="text-white text-center group-hover:underline group-hover:underline-offset-4 items-end font-bold text-3xl"
+      >
+        {{ product.title }}
+      </h3>
+      <p class="max-w-[45ch] text-lg text-base-content mt-12">
+        {{ product.description }}
+      </p>
+      <p class="text-accent font-bold text-3xl h-fit mt-auto text-end">
+        {{ product.price | currency }}
+      </p>
+    </div>
+  </a>
+</div>
